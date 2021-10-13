@@ -1,0 +1,6 @@
+B1. cau hinh csdl
+- Tao CSDL:
+- Tao bang sinh vien
+b2: tao du an php
+->giao dien
+->dbhelper->cau hinh va lenh thao tac csdl->common
