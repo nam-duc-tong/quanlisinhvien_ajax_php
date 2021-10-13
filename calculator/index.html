@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+    <form method="get" name="myform">
+        <input type="text" name="a" id="a" style="display:block" value="" required placeholder="Nhap a ">
+        <input type="text" name="a" id="b" style="display: block" value="" required placeholder="Nhap a ">
+        <input type="text" name="a" id="cal" style="display: block" required placeholder="Nhap phep tinh ">
+
+    </form>
+    <div class="container">
+        <div class="screen">
+            <span class="overlay">SIMPlE CODE</span>
+            <span class="input">0</span>
+        </div>
+        <div class="keyboard">
+            <button class="item item1">AC</button>
+            <button class="item item2"onclick="setPhepTinh('%')">%</button>
+            <button class="item item3"onclick="setPhepTinh('+')">+</button>
+            <button class="item item4" value="7" onclick="setValue(7)">7</button>
+            <button class="item item5" value="8" onclick="setValue(8)">8</button>
+            <button class="item item6" value="9" onclick="setValue(9)">9</button>
+            <button class="item item7" onclick="setPhepTinh('-')">-</button>
+            <button class="item item8" value="4" onclick="setValue(4)">4</button>
+            <button class="item item9" value="5" onclick="setValue(5)">5</button>
+            <button class="item item10" value="6" onclick="setValue(6)">6</button>
+            <button class="item item11"onclick="setPhepTinh('*')">*</button>
+            <button class="item item12" value="1" onclick="setValue(1)">1</button>
+            <button class="item item13" value="2" onclick="setValue(2)">2</button>
+            <button class="item item14" value="3" onclick="setValue(3)">3</button>
+            <button class="item item15" onclick="setPhepTinh('/')">/</button>
+            <button class="item item16" value="7" onclick="setValue(0)">0</button>
+            <button class="item item17">00</button>
+            <button class="item item18" value="." onclick="setValue('.')">.</button>
+            <button class="item item19">=</button>
+         
+        </div>
+    </div>
+    <script src="main.js">
+        function setValue(num){
+            if(option==1){
+                $("a").val($("a").val()+num)
+            }
+            else{
+
+            }
+        }
+        function setPhepTinh(pheptinh){
+            $('cal').val(pheptinh)
+            option = 2;
+        }
+    </script>
+</body>
+</html>
